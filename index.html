@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +19,7 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(180deg,#0b0b12,#141420);
+background:#0b0b12;
 color:white;
 }
 
@@ -30,125 +31,88 @@ padding:50px 20px;
 }
 
 .logo{
-font-size:40px;
+font-size:42px;
 font-weight:700;
 background:linear-gradient(90deg,#a78bfa,#c084fc);
 -webkit-background-clip:text;
 color:transparent;
+text-decoration:none;
+display:inline-block;
 }
 
 .tagline{
-margin-top:8px;
+margin-top:10px;
 color:#9ca3af;
-font-size:14px;
 }
 
 /* LINK HUB */
 
 .links{
 max-width:420px;
-margin:35px auto;
+margin:30px auto;
 }
 
 .link{
 display:block;
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(10px);
+background:#16161f;
 padding:16px;
 margin:12px 0;
 border-radius:14px;
 text-decoration:none;
 color:white;
-font-weight:500;
-border:1px solid rgba(255,255,255,0.08);
 transition:0.3s;
 }
 
 .link:hover{
-transform:translateY(-3px);
-background:rgba(255,255,255,0.08);
+background:#242436;
+transform:scale(1.04);
 }
 
-/* ARTICLE LIBRARY */
+/* SECTION */
 
-.library{
-margin-top:60px;
-display:flex;
-height:70vh;
-border-top:1px solid rgba(255,255,255,0.06);
+.section{
+max-width:800px;
+margin:60px auto;
+padding:20px;
+}
+
+.section h2{
+margin-bottom:20px;
+font-size:26px;
+}
+
+/* CATEGORY */
+
+.category{
+background:#16161f;
+border-radius:14px;
+margin-bottom:12px;
+cursor:pointer;
+padding:16px;
+}
+
+.category:hover{
+background:#22222e;
 }
 
 /* TOPICS */
 
-.sidebar{
-width:38%;
-padding:22px;
-overflow-y:auto;
-border-right:1px solid rgba(255,255,255,0.08);
+.topics{
+display:none;
+padding:14px;
+background:#11111a;
+border-radius:0 0 14px 14px;
 }
 
 .topic{
-padding:12px;
-border-radius:8px;
+display:block;
+padding:8px 0;
 color:#9ca3af;
-cursor:pointer;
-transition:0.2s;
+text-decoration:none;
 }
 
 .topic:hover{
-background:#1f1f2e;
 color:white;
-}
-
-/* ARTICLES */
-
-.articles{
-width:62%;
-padding:20px;
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:16px;
-overflow-y:auto;
-}
-
-.card{
-background:#1a1a27;
-padding:18px;
-border-radius:14px;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-font-size:14px;
-transition:0.3s;
-border:1px solid rgba(255,255,255,0.05);
-}
-
-.card:hover{
-background:#242436;
-transform:scale(1.05);
-}
-
-/* MOBILE */
-
-@media(max-width:800px){
-
-.library{
-flex-direction:column;
-height:auto;
-}
-
-.sidebar{
-width:100%;
-border-right:none;
-border-bottom:1px solid rgba(255,255,255,0.08);
-}
-
-.articles{
-width:100%;
-grid-template-columns:1fr;
-}
-
 }
 
 </style>
@@ -158,7 +122,7 @@ grid-template-columns:1fr;
 
 <div class="header">
 
-<div class="logo">✨ Orionverse</div>
+<a href="/" class="logo">✨ Orionverse</a>
 
 <div class="tagline">
 Every night a poem, every morning a journey
@@ -166,7 +130,6 @@ Every night a poem, every morning a journey
 
 <div class="links">
 
-<a class="link" href="#">📚 My Articles</a>
 <a class="link" href="#">✍️ My Writings</a>
 <a class="link" href="#">🎥 Watch</a>
 <a class="link" href="#">📖 Books</a>
@@ -176,37 +139,90 @@ Every night a poem, every morning a journey
 
 </div>
 
-<div class="library">
+<div class="section">
 
-<div class="sidebar">
+<h2>Orionverse</h2>
 
-<div class="topic">Activism</div>
-<div class="topic">Anxiety</div>
-<div class="topic">Artificial Intelligence</div>
-<div class="topic">Biology</div>
-<div class="topic">Boundaries</div>
-<div class="topic">Career</div>
-<div class="topic">Cognitive Science</div>
-<div class="topic">Communication</div>
-<div class="topic">Computer Science</div>
-<div class="topic">Culture</div>
+<div class="category" onclick="toggle(this)">
+Mind
+<div class="topics">
+
+<a class="topic" href="articles/anxiety.html">Anxiety</a>
+<a class="topic" href="articles/boundaries.html">Boundaries</a>
+<a class="topic" href="articles/psychology.html">Psychology</a>
+
+</div>
+</div>
+
+<div class="category" onclick="toggle(this)">
+Technology
+<div class="topics">
+
+<a class="topic" href="articles/artificial-intelligence.html">Artificial Intelligence</a>
+<a class="topic" href="articles/computer-science.html">Computer Science</a>
+
+</div>
+</div>
+
+<div class="category" onclick="toggle(this)">
+Science
+<div class="topics">
+
+<a class="topic" href="articles/biology.html">Biology</a>
+<a class="topic" href="articles/cognitive-science.html">Cognitive Science</a>
+
+</div>
+</div>
+
+<div class="category" onclick="toggle(this)">
+Society
+<div class="topics">
+
+<a class="topic" href="articles/activism.html">Activism</a>
+<a class="topic" href="articles/communication.html">Communication</a>
+<a class="topic" href="articles/culture.html">Culture</a>
+
+</div>
+</div>
+
+<div class="category" onclick="toggle(this)">
+Career
+<div class="topics">
+
+<a class="topic" href="articles/work.html">Work</a>
+<a class="topic" href="articles/productivity.html">Productivity</a>
+
+</div>
+</div>
+
+<div class="category" onclick="toggle(this)">
+Life
+<div class="topics">
+
+<a class="topic" href="articles/philosophy.html">Philosophy</a>
+<a class="topic" href="articles/creativity.html">Creativity</a>
+
+</div>
+</div>
 
 </div>
 
-<div class="articles">
+<script>
 
-<div class="card">AI and the Future</div>
-<div class="card">Understanding Anxiety</div>
-<div class="card">Creative Thinking</div>
-<div class="card">Digital Minimalism</div>
-<div class="card">Deep Work</div>
-<div class="card">Modern Philosophy</div>
-<div class="card">Human Psychology</div>
-<div class="card">Focus and Productivity</div>
+function toggle(el){
 
-</div>
+let topics = el.querySelector(".topics");
 
-</div>
+if(topics.style.display === "block"){
+topics.style.display = "none";
+}
+else{
+topics.style.display = "block";
+}
+
+}
+
+</script>
 
 </body>
 </html>
