@@ -1,8 +1,8 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -20,126 +20,146 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#0b0b12;
+background:linear-gradient(180deg,#050507,#0e0e18);
 color:white;
+line-height:1.6;
 }
 
 /* HEADER */
 
 .header{
 text-align:center;
-padding:50px 20px;
+padding:70px 20px 40px;
 }
 
 .logo{
-font-size:42px;
+font-size:48px;
 font-weight:700;
-background:linear-gradient(90deg,#a78bfa,#c084fc);
+background:linear-gradient(90deg,#a78bfa,#c084fc,#f472b6);
 -webkit-background-clip:text;
 color:transparent;
 text-decoration:none;
 display:inline-block;
+letter-spacing:1px;
 }
 
 .tagline{
-margin-top:10px;
+margin-top:14px;
 color:#9ca3af;
+font-size:15px;
 }
 
 /* LINK HUB */
 
 .links{
 max-width:420px;
-margin:30px auto;
+margin:40px auto;
 }
 
 .link{
 display:block;
-background:#16161f;
-padding:16px;
-margin:12px 0;
-border-radius:14px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+padding:18px;
+margin:14px 0;
+border-radius:16px;
 text-decoration:none;
 color:white;
 transition:0.3s;
+border:1px solid rgba(255,255,255,0.08);
 }
 
 .link:hover{
 background:#242436;
-transform:scale(1.04);
-}
-
-/* FEATURED SECTION */
-
-.featured{
-max-width:800px;
-margin:40px auto;
-background:#16161f;
-padding:30px;
-border-radius:14px;
-text-align:center;
-}
-
-.featured h2{
-margin-bottom:10px;
-}
-
-.featured p{
-color:#9ca3af;
-margin-bottom:10px;
+transform:translateY(-3px) scale(1.03);
 }
 
 /* SECTION */
 
 .section{
-max-width:800px;
+max-width:850px;
 margin:60px auto;
 padding:20px;
 }
 
 .section h2{
-margin-bottom:20px;
-font-size:26px;
+margin-bottom:24px;
+font-size:28px;
+color:#e5e7eb;
 }
 
 /* CATEGORY */
 
 .category{
-background:#16161f;
-border-radius:14px;
-margin-bottom:12px;
+background:rgba(255,255,255,0.05);
+border-radius:16px;
+margin-bottom:14px;
 cursor:pointer;
-padding:16px;
+padding:18px;
+font-size:17px;
+border:1px solid rgba(255,255,255,0.05);
 transition:0.3s;
 }
 
 .category:hover{
-background:#242436;
-transform:scale(1.03);
+background:#1a1a28;
+transform:translateY(-2px);
 }
 
 /* TOPICS */
 
 .topics{
-display:none;
-padding:14px;
-background:#11111a;
-border-radius:0 0 14px 14px;
+max-height:0;
+overflow:hidden;
+transition:0.35s ease;
+padding-left:10px;
+}
+
+.topics.open{
+max-height:400px;
+margin-top:10px;
 }
 
 .topic{
 display:block;
-padding:8px 0;
+padding:10px 0;
 color:#9ca3af;
 text-decoration:none;
+font-size:15px;
 transition:0.2s;
 }
 
 .topic:hover{
-color:#a78bfa;
+color:white;
+transform:translateX(6px);
+}
+
+/* FOOTER */
+
+.footer{
+text-align:center;
+margin-top:80px;
+padding:40px;
+color:#6b7280;
+border-top:1px solid rgba(255,255,255,0.05);
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.logo{
+font-size:36px;
+}
+
+.section{
+padding:10px;
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
@@ -163,25 +183,9 @@ Every night a poem, every morning a journey
 
 </div>
 
-<!-- FEATURED -->
-
-<div class="featured">
-
-<h2>Featured Essays</h2>
-
-<p>
-Explore deep ideas about mind, science, philosophy and the future.
-</p>
-
-<a class="topic" href="https://aeon.co" target="_blank">
-Read essays →
-</a>
-
-</div>
-
 <div class="section">
 
-<h2>Orionverse</h2>
+<h2>Explore Orionverse</h2>
 
 <div class="category" onclick="toggle(this)">
 Mind
@@ -247,23 +251,22 @@ Life
 
 </div>
 
+<div class="footer">
+© 2026 Orionverse — A universe of ideas
+</div>
+
 <script>
 
 function toggle(el){
 
 let topics = el.querySelector(".topics");
 
-if(topics.style.display === "block"){
-topics.style.display = "none";
-}
-else{
-topics.style.display = "block";
-}
+topics.classList.toggle("open");
 
 }
 
 </script>
 
 </body>
+
 </html>
-```
