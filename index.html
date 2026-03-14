@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Orionverse | Creative Hub</title>
+<title>Orionova | Creative Universe</title>
 
 <style>
 
@@ -12,56 +14,115 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+font-family:Arial;
 }
 
 body{
-background:linear-gradient(135deg,#0a0a0a,#111827);
+background:linear-gradient(135deg,#020617,#0f172a,#020617);
 color:white;
+}
+
+/* NAVBAR */
+
+nav{
 display:flex;
+justify-content:space-between;
+padding:20px 60px;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+}
+
+nav h2{
+letter-spacing:2px;
+}
+
+nav a{
+color:white;
+margin-left:25px;
+text-decoration:none;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+/* HERO */
+
+.hero{
+height:80vh;
+display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
-height:100vh;
 text-align:center;
 }
 
-.container{
-max-width:700px;
-padding:40px;
-}
-
-h1{
-font-size:55px;
-letter-spacing:2px;
+.hero h1{
+font-size:60px;
 margin-bottom:20px;
 }
 
-p{
-font-size:18px;
-color:#cbd5e1;
-line-height:1.6;
-margin-bottom:30px;
+.hero p{
+color:#cbd5f5;
+font-size:20px;
 }
 
+/* BUTTON */
+
 .btn{
-display:inline-block;
+margin-top:30px;
 padding:12px 28px;
-background:#6366f1;
-color:white;
-text-decoration:none;
+background:#38bdf8;
 border-radius:8px;
-font-size:16px;
+text-decoration:none;
+color:black;
+font-weight:bold;
 transition:0.3s;
 }
 
 .btn:hover{
-background:#4f46e5;
-transform:scale(1.05);
+transform:scale(1.1);
+}
+
+/* PORTFOLIO */
+
+.portfolio{
+padding:80px 40px;
+text-align:center;
+}
+
+.grid{
+margin-top:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#111827;
+padding:40px;
+border-radius:10px;
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* INSTAGRAM */
+
+.instagram{
+text-align:center;
+padding:80px;
 }
 
 .footer{
-margin-top:40px;
-font-size:14px;
+text-align:center;
+padding:30px;
 color:#94a3b8;
 }
 
@@ -71,22 +132,67 @@ color:#94a3b8;
 
 <body>
 
-<div class="container">
+<nav>
 
-<h1>Orionverse</h1>
+<h2>Orionova</h2>
 
-<p>
-Welcome to my creative universe.  
-Explore my portfolio, projects, and inspirations where design, ideas, and creativity connect in one place.
-</p>
+<div>
 
-<a class="btn" href="#">Explore My Work</a>
+<a href="#">Home</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#instagram">Instagram</a>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<h1>Welcome to My Creative Universe</h1>
+
+<p>Design • Ideas • Inspiration</p>
+
+<a class="btn" href="#portfolio">Explore Work</a>
+
+</section>
+
+<section class="portfolio" id="portfolio">
+
+<h2>My Work</h2>
+
+<div class="grid">
+
+<div class="card">Creative Design</div>
+<div class="card">Visual Concept</div>
+<div class="card">Graphic Project</div>
+<div class="card">Brand Idea</div>
+<div class="card">Motion Design</div>
+<div class="card">Art Direction</div>
+
+</div>
+
+</section>
+
+<section class="instagram" id="instagram">
+
+<h2>Connect With Me</h2>
+
+<br>
+
+<a class="btn" href="https://instagram.com/yourusername" target="_blank">
+
+Visit My Instagram
+
+</a>
+
+</section>
 
 <div class="footer">
-Created by Nayan • Creative Portfolio
-</div>
+
+© 2026 Orionova — Creative Portfolio
 
 </div>
 
 </body>
+
 </html>
