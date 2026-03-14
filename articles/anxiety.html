@@ -1,0 +1,199 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Orionverse</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0b0b12;
+color:white;
+}
+
+.header{
+text-align:center;
+padding:50px 20px;
+}
+
+.logo{
+font-size:42px;
+font-weight:700;
+background:linear-gradient(90deg,#a78bfa,#c084fc);
+-webkit-background-clip:text;
+color:transparent;
+text-decoration:none;
+}
+
+.tagline{
+margin-top:10px;
+color:#9ca3af;
+}
+
+.section{
+max-width:800px;
+margin:60px auto;
+padding:20px;
+}
+
+.section h2{
+margin-bottom:20px;
+font-size:26px;
+}
+
+.category{
+background:#16161f;
+border-radius:14px;
+margin-bottom:12px;
+cursor:pointer;
+padding:16px;
+}
+
+.category:hover{
+background:#22222e;
+}
+
+.topics{
+display:none;
+padding:14px;
+background:#11111a;
+border-radius:0 0 14px 14px;
+}
+
+.topic{
+display:block;
+padding:8px 0;
+color:#9ca3af;
+text-decoration:none;
+}
+
+.topic:hover{
+color:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+
+<a href="/" class="logo">✨ Orionverse</a>
+
+<div class="tagline">
+Every night a poem, every morning a journey
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>Knowledge</h2>
+
+<div class="category" onclick="toggle(this)">
+Mind
+<div class="topics">
+
+<a class="topic" href="https://aeon.co/search?q=anxiety" target="_blank">Anxiety</a>
+<a class="topic" href="https://aeon.co/search?q=boundaries" target="_blank">Boundaries</a>
+<a class="topic" href="https://aeon.co/search?q=psychology" target="_blank">Psychology</a>
+<a class="topic" href="https://aeon.co/search?q=coping" target="_blank">Coping</a>
+<a class="topic" href="https://aeon.co/search?q=mental+models" target="_blank">Mental Models</a>
+
+</div>
+</div>
+
+<div class="category" onclick="toggle(this)">
+Technology
+<div class="topics">
+
+<a class="topic" href="https://aeon.co/search?q=artificial+intelligence" target="_blank">Artificial Intelligence</a>
+<a class="topic" href="https://aeon.co/search?q=computer+science" target="_blank">Computer Science</a>
+<a class="topic" href="https://aeon.co/search?q=technology+future" target="_blank">Future Technology</a>
+
+</div>
+</div>
+
+<div class="category" onclick="toggle(this)">
+Science
+<div class="topics">
+
+<a class="topic" href="https://aeon.co/search?q=biology" target="_blank">Biology</a>
+<a class="topic" href="https://aeon.co/search?q=cognitive+science" target="_blank">Cognitive Science</a>
+<a class="topic" href="https://aeon.co/search?q=neuroscience" target="_blank">Neuroscience</a>
+<a class="topic" href="https://aeon.co/search?q=evolution" target="_blank">Evolution</a>
+
+</div>
+</div>
+
+<div class="category" onclick="toggle(this)">
+Society
+<div class="topics">
+
+<a class="topic" href="https://aeon.co/search?q=activism" target="_blank">Activism</a>
+<a class="topic" href="https://aeon.co/search?q=communication" target="_blank">Communication</a>
+<a class="topic" href="https://aeon.co/search?q=culture" target="_blank">Culture</a>
+<a class="topic" href="https://aeon.co/search?q=politics" target="_blank">Politics</a>
+<a class="topic" href="https://aeon.co/search?q=media" target="_blank">Media</a>
+
+</div>
+</div>
+
+<div class="category" onclick="toggle(this)">
+Career
+<div class="topics">
+
+<a class="topic" href="https://aeon.co/search?q=work" target="_blank">Work</a>
+<a class="topic" href="https://aeon.co/search?q=productivity" target="_blank">Productivity</a>
+<a class="topic" href="https://aeon.co/search?q=career" target="_blank">Career Strategy</a>
+
+</div>
+</div>
+
+<div class="category" onclick="toggle(this)">
+Life
+<div class="topics">
+
+<a class="topic" href="https://aeon.co/search?q=philosophy" target="_blank">Philosophy</a>
+<a class="topic" href="https://aeon.co/search?q=creativity" target="_blank">Creativity</a>
+<a class="topic" href="https://aeon.co/search?q=meaning+of+life" target="_blank">Meaning</a>
+<a class="topic" href="https://aeon.co/search?q=spirituality" target="_blank">Spirituality</a>
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+function toggle(el){
+
+let topics = el.querySelector(".topics");
+
+if(topics.style.display === "block"){
+topics.style.display = "none";
+}
+else{
+topics.style.display = "block";
+}
+
+}
+
+</script>
+
+</body>
+</html>
+```
