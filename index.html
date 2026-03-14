@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,6 +69,26 @@ background:#242436;
 transform:scale(1.04);
 }
 
+/* FEATURED SECTION */
+
+.featured{
+max-width:800px;
+margin:40px auto;
+background:#16161f;
+padding:30px;
+border-radius:14px;
+text-align:center;
+}
+
+.featured h2{
+margin-bottom:10px;
+}
+
+.featured p{
+color:#9ca3af;
+margin-bottom:10px;
+}
+
 /* SECTION */
 
 .section{
@@ -89,10 +110,12 @@ border-radius:14px;
 margin-bottom:12px;
 cursor:pointer;
 padding:16px;
+transition:0.3s;
 }
 
 .category:hover{
-background:#22222e;
+background:#242436;
+transform:scale(1.03);
 }
 
 /* TOPICS */
@@ -109,10 +132,11 @@ display:block;
 padding:8px 0;
 color:#9ca3af;
 text-decoration:none;
+transition:0.2s;
 }
 
 .topic:hover{
-color:white;
+color:#a78bfa;
 }
 
 </style>
@@ -136,6 +160,22 @@ Every night a poem, every morning a journey
 <a class="link" href="#">🧠 Products I Use</a>
 
 </div>
+
+</div>
+
+<!-- FEATURED -->
+
+<div class="featured">
+
+<h2>Featured Essays</h2>
+
+<p>
+Explore deep ideas about mind, science, philosophy and the future.
+</p>
+
+<a class="topic" href="https://aeon.co" target="_blank">
+Read essays →
+</a>
 
 </div>
 
@@ -226,3 +266,4 @@ topics.style.display = "block";
 
 </body>
 </html>
+```
